@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f5f7;
+    color: #171717;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.topo {
+    background: #111827;
+    color: white;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo h1 {
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.logo p {
+    margin-top: 5px;
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+    color: white;
+    background: #2563eb;
+}
+
+/* =========================
+   DESTAQUE
+========================= */
+
+.destaque {
+    min-height: 430px;
+    padding: 80px 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+}
+
+.destaque span,
+article span {
+    display: inline-block;
+    width: fit-content;
+    color: #2563eb;
+    background: #eff6ff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+.destaque h2 {
+    max-width: 800px;
+    margin: 15px 0;
+    font-size: 56px;
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.destaque p {
+    max-width: 650px;
+    color: #555;
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   BOTÃO
+========================= */
+
+button {
+    width: fit-content;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 15px 26px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.secao {
+    padding: 70px 7%;
+}
+
+.secao h2 {
+    font-size: 34px;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.noticias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+article {
+    background: white;
+    padding: 32px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+article h3 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin: 12px 0;
+}
+
+article p,
+.secao > p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* =========================
+   IMAGENS DAS NOTÍCIAS
+========================= */
+
+article img {
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* =========================
+   LINK DA NOTÍCIA
+========================= */
+
+.ler-noticia {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 9px 14px;
+    color: #2563eb;
+    background: #eff6ff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.ler-noticia:hover {
+    background: #dbeafe;
+    text-decoration: none;
+    transform: translateX(3px);
+}
+
+/* =========================
+   PÁGINA DA REPORTAGEM
+========================= */
+
+.materia {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 25px;
+}
+
+.materia > span {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.materia h1 {
+    font-size: 46px;
+    line-height: 1.12;
+    margin: 15px 0 20px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+/* DATA */
+
+.data {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* AUTOR */
+
+.autor {
+    color: #444;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* SUBTÍTULO */
+
+.subtitulo {
+    color: #666;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* IMAGEM DA REPORTAGEM */
+
+.materia img {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    display: block;
+}
+
+/* TEXTO DA REPORTAGEM */
+
+.materia p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* TÍTULO DENTRO DA REPORTAGEM */
+
+.materia h2 {
+    font-size: 30px;
+    margin: 40px 0 20px;
+}
+
+/* =========================
+   CITAÇÕES DA ENTREVISTA
+========================= */
+
+.materia blockquote {
+    display: block;
+    width: 100%;
+    margin: 25px 0;
+    padding: 20px 25px;
+    background: #eeeeee;
+    border-left: 5px solid #2563eb;
+    border-radius: 6px;
+    font-size: 19px;
+    line-height: 1.6;
+    font-style: italic;
+    color: #333;
+}
+
+/* =========================
+   BOTÃO VOLTAR
+========================= */
+
+.voltar {
+    display: inline-block;
+    margin-top: 20px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.voltar:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background: #111827;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 700px) {
+
+    .topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    nav a {
+        padding: 7px 10px;
+        font-size: 14px;
+    }
+
+    .destaque h2 {
+        font-size: 40px;
+        line-height: 1.1;
+    }
+
+    .noticias {
+        grid-template-columns: 1fr;
+    }
+
+    .materia h1 {
+        font-size: 36px;
+        line-height: 1.12;
+    }
+
+    .materia img {
+        width: 100%;
+    }
+
+    article img {
+        width: 100%;
+    }
+}
