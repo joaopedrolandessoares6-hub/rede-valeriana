@@ -2,178 +2,234 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Rede Valeriana | Notícias de Nova Almeida</title>
-
-    <meta
-        name="description"
-        content="Notícias, reportagens, entrevistas e histórias da comunidade de Nova Almeida, Serra - ES."
-    >
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rede Valeriana: notícias, entrevistas e informações de Nova Almeida, Serra, Espírito Santo.">
+  <meta name="theme-color" content="#123b67">
+  <title>Rede Valeriana | A voz de Nova Almeida</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="#inicio" aria-label="Rede Valeriana - Início">
+        <span class="brand-mark">RV</span>
+        <span>
+          <strong>REDE VALERIANA</strong>
+          <small>Informação que conecta</small>
+        </span>
+      </a>
 
-    <header class="topo">
-        <div class="logo">
-            <h1>REDE VALERIANA</h1>
-            <p>Informação que vem da comunidade.</p>
+      <button class="menu-toggle" id="menu-toggle"
+        type="button" aria-label="Abrir menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav class="main-nav" id="main-nav">
+        <a href="#inicio">Início</a>
+        <a href="#noticias">Notícias</a>
+        <a href="#entrevistas">Entrevistas</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#previsao-tempo">Previsão do tempo</a>
+        <a href="#participe">Participe</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-content">
+        <span class="eyebrow">NOTÍCIAS DA NOSSA REGIÃO</span>
+        <h1>A voz de <span>Nova Almeida.</span></h1>
+        <p>
+          Notícias, histórias e informações da comunidade,
+          com espaço para a voz dos moradores.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#noticias">Ver notícias</a>
+          <a class="button button-outline" href="#participe">Envie uma sugestão</a>
+        </div>
+        <div class="hero-location">📍 Nova Almeida · Serra · Espírito Santo</div>
+      </div>
+    </section>
+
+    <section class="section container" id="noticias">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">FIQUE POR DENTRO</span>
+          <h2>Últimas notícias</h2>
+          <p>Informações e acontecimentos da nossa comunidade.</p>
+        </div>
+      </div>
+
+      <div class="news-grid">
+        <article class="news-card">
+          <a class="news-image news-image-market"
+             href="reportagem-noroeste.html"
+             aria-label="Ler reportagem sobre o Supermercado Noroeste">
+            <img src="imagens/noroeste.jpg"
+                 alt="Supermercado Noroeste em Nova Almeida"
+                 loading="lazy">
+          </a>
+          <div class="news-body">
+            <span class="category">COMÉRCIO LOCAL</span>
+            <h3>O que R$ 100 compram no Supermercado Noroeste?</h3>
+            <p>
+              Uma reportagem sobre o poder de compra e a experiência
+              de quem faz compras no comércio da região.
+            </p>
+            <a class="text-link" href="reportagem-noroeste.html">
+              Ler reportagem <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-placeholder" aria-hidden="true">🎤</div>
+          <div class="news-body">
+            <span class="category">ENTREVISTAS</span>
+            <h3>A comunidade tem voz</h3>
+            <p>
+              A Rede Valeriana abre espaço para moradores compartilharem
+              suas histórias, opiniões e ideias.
+            </p>
+            <a class="text-link" href="#entrevistas">
+              Conhecer o projeto <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-placeholder news-placeholder-green"
+               aria-hidden="true">📰</div>
+          <div class="news-body">
+            <span class="category">PARTICIPAÇÃO</span>
+            <h3>Tem uma notícia na sua região?</h3>
+            <p>
+              Ajude a mostrar o que acontece em Nova Almeida.
+              Sua sugestão pode virar uma reportagem.
+            </p>
+            <a class="text-link" href="#participe">
+              Enviar sugestão <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="interview-section" id="entrevistas">
+      <div class="container interview-content">
+        <div class="interview-icon" aria-hidden="true">🎙️</div>
+        <div>
+          <span class="eyebrow">REPORTAGENS E ENTREVISTAS</span>
+          <h2>Histórias reais, vozes da comunidade.</h2>
+          <p>
+            Nosso objetivo é ouvir moradores, conhecer iniciativas locais
+            e mostrar os acontecimentos que fazem parte do dia a dia
+            de Nova Almeida.
+          </p>
+          <a class="button button-light" href="#participe">
+            Sugira uma entrevista
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="weather-section" id="previsao-tempo">
+      <div class="container">
+        <div class="section-heading weather-heading">
+          <div>
+            <span class="eyebrow">SERVIÇO À COMUNIDADE</span>
+            <h2>🌤️ Tempo em Nova Almeida</h2>
+            <p>Confira as condições atuais e a previsão dos próximos dias.</p>
+          </div>
         </div>
 
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#noticias">Notícias</a>
-            <a href="#entrevistas">Entrevistas</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#participe">Participe</a>
-        </nav>
-    </header>
+        <div id="weather-current" class="weather-current" aria-live="polite">
+          <p>Carregando a previsão do tempo...</p>
+        </div>
 
-    <main id="inicio">
+        <h3 class="forecast-title">Previsão para os próximos 7 dias</h3>
+        <div id="weather-forecast" class="weather-forecast" aria-live="polite">
+          <p>Carregando previsão...</p>
+        </div>
 
-        <section class="destaque">
-            <span>JORNALISMO COMUNITÁRIO</span>
+        <div class="weather-footer">
+          <p id="weather-updated" class="weather-updated"></p>
+          <button id="weather-refresh" class="button button-primary"
+                  type="button">
+            Atualizar previsão
+          </button>
+        </div>
 
-            <h2>A voz de Nova Almeida</h2>
+        <p class="weather-source">
+          Dados meteorológicos:
+          <a href="https://open-meteo.com/" target="_blank"
+             rel="noopener noreferrer">Open-Meteo</a>.
+          A previsão pode mudar ao longo do dia.
+        </p>
+      </div>
+    </section>
 
-            <p>
-                Notícias, entrevistas e histórias contadas
-                diretamente pela comunidade.
-            </p>
+    <section class="about-section" id="sobre">
+      <div class="container about-grid">
+        <div class="about-symbol" aria-hidden="true">
+          <span>RV</span>
+          <small>Rede Valeriana</small>
+        </div>
+        <div class="about-content">
+          <span class="eyebrow">QUEM SOMOS</span>
+          <h2>Uma rede feita para dar voz à comunidade.</h2>
+          <p>
+            A Rede Valeriana é um projeto de comunicação comunitária
+            que busca registrar acontecimentos, ouvir moradores e
+            divulgar histórias, iniciativas e assuntos de interesse
+            público de Nova Almeida e região.
+          </p>
+          <p>
+            Acreditamos que a informação aproxima as pessoas e ajuda
+            a comunidade a conhecer melhor o lugar onde vive.
+          </p>
+          <a class="text-link" href="#participe">
+            Faça parte do projeto <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
 
-            <a href="#sobre" class="ler-noticia">
-                Conheça a Rede Valeriana →
-            </a>
-        </section>
+    <section class="participate-section" id="participe">
+      <div class="container participate-content">
+        <span class="eyebrow">SUA VOZ IMPORTA</span>
+        <h2>Ajude a contar as histórias de Nova Almeida.</h2>
+        <p>
+          Conhece um acontecimento, um projeto interessante, um evento
+          ou uma história que merece ser conhecida? Envie sua sugestão
+          para a Rede Valeriana.
+        </p>
+        <a class="button button-light"
+           href="https://forms.gle/HmzJyTuMzwdEEs41A"
+           target="_blank" rel="noopener noreferrer">
+          Enviar sugestão de notícia →
+        </a>
+        <p class="participate-note">
+          O envio de uma sugestão não garante sua publicação.
+          As informações serão avaliadas antes de virar reportagem.
+        </p>
+      </div>
+    </section>
+  </main>
 
-        <section id="noticias" class="secao">
-            <h2>Últimas notícias</h2>
-
-            <div class="noticias">
-
-                <article>
-                    <img
-                        src="imagens/noroeste.jpg"
-                        alt="Supermercado Noroeste"
-                    >
-
-                    <span>REPORTAGEM</span>
-
-                    <h3>
-                        O que R$ 100 compram no Supermercado Noroeste?
-                    </h3>
-
-                    <p>
-                        Fomos às ruas para descobrir o que é possível
-                        comprar com R$ 100 e ouvir a opinião da comunidade.
-                    </p>
-
-                    <a
-                        href="reportagem-noroeste.html"
-                        class="ler-noticia"
-                    >
-                        Ler reportagem →
-                    </a>
-                </article>
-
-                <article>
-                    <span>ENTREVISTA</span>
-
-                    <h3>A opinião de quem vive em Nova Almeida</h3>
-
-                    <p>
-                        Conversamos com moradores para conhecer
-                        suas opiniões sobre a região e suas mudanças.
-                    </p>
-
-                    <a href="#entrevistas" class="ler-noticia">
-                        Ver entrevistas →
-                    </a>
-                </article>
-
-            </div>
-        </section>
-
-        <section id="entrevistas" class="secao">
-            <h2>Entrevistas</h2>
-
-            <p>
-                Pessoas da comunidade contando suas histórias,
-                experiências e opiniões.
-            </p>
-        </section>
-
-        <section id="sobre" class="secao">
-            <h2>Sobre a Rede Valeriana</h2>
-
-            <p>
-                A Rede Valeriana é um projeto independente de
-                comunicação comunitária criado para registrar
-                notícias, histórias e opiniões de Nova Almeida.
-            </p>
-
-            <p>
-                Nosso objetivo é dar voz à comunidade e divulgar
-                informações de interesse local com responsabilidade.
-            </p>
-        </section>
-
-        <section id="envie-noticia" class="secao">
-            <h2>Envie sua notícia</h2>
-
-            <p>
-                Conhece uma história, um acontecimento ou algo
-                que precisa de atenção em Nova Almeida?
-                Compartilhe sua sugestão com a gente!
-            </p>
-
-            <a
-                href="https://forms.gle/HmzJyTuMzwdEEs41A"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="ler-noticia"
-            >
-                Enviar sugestão →
-            </a>
-        </section>
-
-        <section id="participe" class="secao">
-            <h2>Participe da Rede Valeriana</h2>
-
-            <p>
-                A Rede Valeriana é feita para a comunidade
-                e pela comunidade. Sua participação ajuda a
-                mostrar as histórias, os acontecimentos e as
-                necessidades de Nova Almeida.
-            </p>
-
-            <p>
-                Conhece uma história interessante, um evento
-                ou algo que merece atenção? Envie sua sugestão
-                e ajude a dar voz à nossa comunidade!
-            </p>
-
-            <a
-                href="https://forms.gle/HmzJyTuMzwdEEs41A"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="ler-noticia"
-            >
-                Quero participar →
-            </a>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>© 2026 Rede Valeriana</p>
-        <p>Informação que vem da comunidade.</p>
-    </footer>
-
-    <script src="script.js"></script>
-
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <a class="footer-brand" href="#inicio">REDE VALERIANA</a>
+      <p>Informação que conecta a nossa comunidade.</p>
+      <p class="footer-location">Nova Almeida · Serra · Espírito Santo</p>
+      <p class="copyright">
+        © <span id="current-year">2026</span> Rede Valeriana.
+        Todos os direitos reservados.
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
