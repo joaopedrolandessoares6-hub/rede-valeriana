@@ -283,7 +283,7 @@ carregarPrevisao();
         editorArea.hidden = false;
 
         displayName.textContent =
-            membro.display || usuarioAtual.email || "Redator";
+             membro.display_name || usuarioAtual.email || "Redator";
 
         mensagem(writerMessage, "");
     }
@@ -291,7 +291,7 @@ carregarPrevisao();
     async function verificarMembro(usuario) {
         const { data, error } = await db
             .from("team_members")
-            .select("user_id, display, role")
+            .select("user_id, display_name, role")
             .eq("user_id", usuario.id)
             .maybeSingle();
 
