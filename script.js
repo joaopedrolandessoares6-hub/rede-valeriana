@@ -289,31 +289,30 @@ carregarPrevisao();
     }
 
     async function verificarMembro(usuario) {
-        const { data, error } = await db
-            .from("team_members")
-            .select("user_id, display_name, role")
-            .eq("user_id", usuario.id)
-            .maybeSingle();
+    const { data, error } = await db
+        .from("team_members")
+        .select("user_id, display_name, role")
+        .eq("user_id", usuario.id)
+        .maybeSingle();
 
-                  
-            if (error) {
-    console.error("Erro real ao verificar equipe:", error);
-    throw new Error(
-        "Erro Supabase (" + error.code + "): " + error.message
-    );
-}
-        }
-        if (!data) {
-            await db.auth.signOut();
-            throw new Error(
-                "Esta conta não está autorizada a acessar a área do redator."
-            );
-        }
-
-        usuarioAtual = usuario;
-        mostrarEditor(data);
-        await carregarArtigos();
+    if (error) {
+        console.error("Erro real ao verificar equipe:", error);
+        throw new Error(
+            "Erro Supabase (" + error.code + "): " + error.message
+        );
     }
+
+    if (!data) {
+        await db.auth.signOut();
+        throw new Error(
+            "Esta conta não está autorizada a acessar a área do redator."
+        );
+    }
+
+    usuarioAtual = usuario;
+    mostrarEditor(data);
+    await carregarArtigos();
+}
 
     async function entrar(evento) {
         evento.preventDefault();
