@@ -295,12 +295,14 @@ carregarPrevisao();
             .eq("user_id", usuario.id)
             .maybeSingle();
 
-        if (error) {
-            throw new Error(
-                "Não foi possível verificar a equipe. Confira as permissões da tabela team_members."
-            );
+                  
+            if (error) {
+    console.error("Erro real ao verificar equipe:", error);
+    throw new Error(
+        "Erro Supabase (" + error.code + "): " + error.message
+    );
+}
         }
-
         if (!data) {
             await db.auth.signOut();
             throw new Error(
