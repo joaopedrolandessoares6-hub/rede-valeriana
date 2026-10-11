@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,7 +8,6 @@
   <meta name="theme-color" content="#123b67">
   <title>Rede Valeriana | A voz de Nova Almeida</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -330,64 +330,6 @@
           O envio de uma sugestão não garante sua publicação.
           As informações serão avaliadas antes de virar reportagem.
         </p>
-      </div>
-    </section>
-
-    <!-- ÚNICA SEÇÃO NOVA: ÁREA DO REDATOR -->
-    <section class="section container" id="area-redator">
-      <div class="writer-panel">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">ACESSO RESTRITO</span>
-            <h2>Área do redator</h2>
-            <p>Espaço interno para preparar e guardar reportagens.</p>
-          </div>
-        </div>
-
-        <div id="writer-login">
-          <form id="writer-login-form">
-            <label for="writer-email">E-mail</label>
-            <input id="writer-email" type="email"
-              autocomplete="username" placeholder="Seu e-mail" required>
-
-            <label for="writer-password">Senha</label>
-            <input id="writer-password" type="password"
-              autocomplete="current-password" placeholder="Sua senha" required>
-
-            <button class="button button-primary" id="writer-login-button"
-              type="submit">Entrar</button>
-          </form>
-        </div>
-
-        <div id="writer-editor" hidden>
-          <p>Conectado como <strong id="writer-display"></strong></p>
-
-          <label for="article-title">Título do rascunho</label>
-          <input id="article-title" type="text" maxlength="200"
-            placeholder="Título da reportagem">
-
-          <label for="article-content">Conteúdo da reportagem</label>
-          <textarea id="article-content" rows="12"
-            placeholder="Escreva sua reportagem aqui..."></textarea>
-
-          <div class="writer-actions">
-            <button class="button button-primary" id="article-save-button"
-              type="button">Salvar rascunho</button>
-            <button class="button button-outline" id="article-new-button"
-              type="button">Novo rascunho</button>
-            <button class="button button-outline" id="writer-logout-button"
-              type="button">Sair</button>
-          </div>
-
-          <p id="article-message" role="status" aria-live="polite"></p>
-
-          <h3>Rascunhos salvos</h3>
-          <div id="articles-list">
-            <p>Seus rascunhos aparecerão aqui depois do login.</p>
-          </div>
-        </div>
-
-        <p id="writer-message" role="status" aria-live="polite"></p>
       </div>
     </section>
   </main>
