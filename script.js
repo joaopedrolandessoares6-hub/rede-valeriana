@@ -455,7 +455,7 @@ carregarPrevisao();
                     .insert({
                         title: title,
                         content: content,
-                        status: "draft",
+                        status: "A apurar",
                         author_id: usuarioAtual.id
                     })
                     .select("id")
