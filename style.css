@@ -76,12 +76,17 @@ section {
     text-decoration: none;
 }
 
-.brand-mark {
+ .brand-mark {
     width: 52px;
     height: 52px;
     display: block;
     object-fit: contain;
     flex-shrink: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
 }
 
 .brand strong,
